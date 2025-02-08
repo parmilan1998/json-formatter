@@ -71,7 +71,7 @@ function App() {
           {/* Input Section */}
           <div className="space-y-4">
             <div className="flex justify-between items-center">
-              <h2 className="text-lg font-semibold text-gray-700">
+              <h2 className="text-base md:text-lg font-semibold text-gray-700">
                 Input JSON
               </h2>
               <div className="space-x-2">
@@ -94,7 +94,7 @@ function App() {
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="w-full h-[450px] p-4 font-mono text-sm bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full h-[400px] p-4 font-mono text-sm bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Paste your JSON here..."
             />
           </div>
@@ -102,20 +102,20 @@ function App() {
           {/* Output Section */}
           <div className="space-y-4">
             <div className="flex justify-between items-center">
-              <h2 className="text-lg font-semibold text-gray-700">
+              <h2 className="text-xs md:text-lg font-semibold text-gray-700">
                 Formatted Output
               </h2>
               <div className="space-x-2">
                 <button
                   onClick={copyToClipboard}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
+                  className="px-4 py-2 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
                 >
                   <Copy className="h-4 w-4 inline-block mr-2" />
                   Copy
                 </button>
                 <button
                   onClick={downloadJSON}
-                  className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+                  className="px-4 py-2 text-sm bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
                 >
                   <Download className="h-4 w-4 inline-block mr-2" />
                   Download
@@ -131,7 +131,7 @@ function App() {
                 </div>
               </div>
             ) : output ? (
-              <div className="h-[450px] overflow-auto rounded-lg border border-gray-300 bg-gray-900">
+              <div className="h-[400px] overflow-auto rounded-lg border border-gray-300 bg-gray-900">
                 <SyntaxHighlighter
                   language="json"
                   style={atomOneDark}
@@ -145,7 +145,7 @@ function App() {
                 </SyntaxHighlighter>
               </div>
             ) : (
-              <div className="h-[450px] flex items-center justify-center border border-gray-300 rounded-lg bg-gray-50">
+              <div className="h-[400px] flex items-center justify-center border border-gray-300 rounded-lg bg-gray-50">
                 <div className="text-center text-gray-500">
                   <Upload className="h-8 w-8 mx-auto mb-2" />
                   <p>Format your JSON to see the result here</p>
