@@ -6,7 +6,7 @@
     Paste your raw JSON data into the provided input field.
 
 2️⃣ **Format JSON** ✨\
-    Click the **"Prettify JSON"** button to format the data.
+    Click the **"Beautify"** button to format the data.
 
 3️⃣ **Review Output** 👀\
     The formatted JSON will be displayed in the output section with clear indentation and structure.
